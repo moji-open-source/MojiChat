@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&family=Inter:wght@400;500&display=swap');
+@import "@flaticon/flaticon-uicons/css/all/all";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  /*--background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+
+  /* --background-dark-rgb: 39, 39, 39;
+  --background-light-rgb: 250, 250, 250; */
+  /* --background-light-rgb: 236, 236, 234; */
+  --background-dark-modern-rgb: 24, 24, 24;
+  --backgroond-rgb: var(--background-light-rgb);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 223, 223, 223;
+    --backgroond-rgb: var(--background-dark-rgb);
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
+  background: rgb(var(--backgroond-rgb));
+}
+
+* {
+  user-select: none;
+  cursor: default;
+  -webkit-user-drag: none;
+}
+
+input {
+  user-select: auto !important;
+}
