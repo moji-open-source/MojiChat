@@ -44,3 +44,47 @@ body {
 input {
   user-select: auto !important;
 }
+
+@layer components {
+  .chat-item {
+    @apply flex mb-5 mt-5 w-full relative box-border
+  }
+
+  .chat-item .chat-item-box {
+    @apply pl-3 pr-[54px];
+  }
+
+  .chat-item .avatar {
+    @apply bg-gray-600 w-10 h-10 rounded-full align-middle flex-shrink-0;
+  }
+
+  .chat-item .chat-item-read-count {
+    @apply min-h-4 py-2 px-3 leading-6 text-default-foreground break-words bg-gray-200 rounded-2xl rounded-tl-sm text-sm;
+  }
+
+  .chat-item .chat-item-user-info {
+    @apply flex gap-2 text-tiny mb-2 whitespace-nowrap leading-[1.5];
+  }
+
+  .is-me {
+    @apply flex-row-reverse;
+  }
+
+  .is-me.chat-item {
+    @apply pl-14 pr-3;
+  }
+
+  .is-me .chat-item-user-info {
+    @apply justify-end flex-row-reverse;
+  }
+
+  .is-me.chat-item .chat-item-read-count {
+    @apply rounded-2xl rounded-tr-sm;
+  }
+
+  .is-me.chat-item .chat-item-box {
+    @apply pl-[54px] pr-3;
+  }
+
+
+}
