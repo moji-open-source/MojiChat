@@ -51,11 +51,11 @@ input {
   }
 
   .chat-item .chat-item-box {
-    @apply pl-3 pr-[54px];
+    @apply pl-3 pr-14 w-full;
   }
 
   .chat-item .avatar {
-    @apply bg-gray-600 w-10 h-10 rounded-full align-middle flex-shrink-0;
+    @apply w-11 h-11 rounded-full align-middle flex-shrink-0;
   }
 
   .chat-item .chat-item-read-count {
@@ -70,9 +70,9 @@ input {
     @apply flex-row-reverse;
   }
 
-  .is-me.chat-item {
-    @apply pl-14 pr-3;
-  }
+  /* .is-me.chat-item { */
+  /* @apply pl-14 pr-3; */
+  /* } */
 
   .is-me .chat-item-user-info {
     @apply justify-end flex-row-reverse;
@@ -83,8 +83,7 @@ input {
   }
 
   .is-me.chat-item .chat-item-box {
-    @apply pl-[54px] pr-3;
+    @apply pl-14 pr-3 flex flex-col items-end;
   }
-
 
 }

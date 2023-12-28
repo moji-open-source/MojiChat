@@ -10,7 +10,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const zoom = useRef(1)
 
   function onKeydownListener(event: KeyboardEvent) {
-    console.log(event.metaKey);
     if (event.metaKey) {
       if (event.key === '=' || event.key === '-') {
         event.preventDefault()

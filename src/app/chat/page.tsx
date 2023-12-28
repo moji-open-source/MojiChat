@@ -4,9 +4,11 @@ import { MessageList } from "@/components/MessageList"
 function Chat() {
   return (
     <div className="chat flex">
-      <MessageList />
+      <div className="flex-shrink-0">
+        <MessageList />
+      </div>
 
-      <div className="flex-grow">
+      <div className="flex-grow overflow-hidden">
         <ChatRoom />
       </div>
     </div>
