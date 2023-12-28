@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gelasio&family=Inter:wght@400;500&display=swap');
-@import "@flaticon/flaticon-uicons/css/all/all";
+@import '@flaticon/flaticon-uicons/css/all/all';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {}
+@layer components {
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,7 +18,6 @@
   /* --background-light-rgb: 236, 236, 234; */
   --background-dark-modern-rgb: 24, 24, 24;
   --backgroond-rgb: var(--background-light-rgb);
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,7 +47,7 @@ input {
 
 @layer components {
   .chat-item {
-    @apply flex mb-5 mt-5 w-full relative box-border
+    @apply flex mb-5 mt-5 w-full relative box-border;
   }
 
   .chat-item .chat-item-box {
@@ -70,10 +70,6 @@ input {
     @apply flex-row-reverse;
   }
 
-  /* .is-me.chat-item { */
-  /* @apply pl-14 pr-3; */
-  /* } */
-
   .is-me .chat-item-user-info {
     @apply justify-end flex-row-reverse;
   }
@@ -85,5 +81,4 @@ input {
   .is-me.chat-item .chat-item-box {
     @apply pl-14 pr-3 flex flex-col items-end;
   }
-
 }
