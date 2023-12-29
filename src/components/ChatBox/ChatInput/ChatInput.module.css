@@ -1,0 +1,18 @@
+.editor {
+  @apply cursor-text;
+  @apply max-h-36 overflow-auto w-full text-wrap outline-none rounded-lg px-1;
+  @apply empty:before:content-[attr(data-placeholder)];
+  @apply before:text-slate-400;
+  @apply focus:after:z-[-1];
+  @apply focus:after:content-[''];
+  @apply focus:after:border-blue-500;
+  @apply focus:after:border-solid;
+  @apply focus:after:border-1;
+  @apply focus:after:rounded-lg;
+  @apply focus:after:absolute;
+  @apply focus:after:w-full;
+  @apply focus:after:h-full;
+  @apply focus:after:left-0;
+  @apply focus:after:top-0;
+  @apply scrollbar-hide;
+}
