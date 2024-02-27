@@ -19,6 +19,9 @@ const config: Config = {
         inter: ["'Inter'", 'sans-serif'],
         gelasio: ["'Gelasio'", 'serif'],
       },
+      list: {
+        'background': 'red'
+      }
     },
   },
   darkMode: 'class',
