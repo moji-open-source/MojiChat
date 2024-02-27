@@ -5,7 +5,8 @@ import { useChatStore } from "@/store/hooks";
 import {
   Listbox,
   ListboxItem,
-  Avatar
+  Avatar,
+  Badge
 } from "@nextui-org/react";
 import dayjs from "dayjs";
 
@@ -33,9 +34,11 @@ export function ChatList() {
 
 function ChatListItem(props: Chat) {
   return <>
-    <div className="flex w-full gap-2">
+    <div className="flex w-full gap-2 pt-1.5 pb-1.5 pl-1 pr-1">
       <div className="avatar">
-        <Avatar src={props.avatar} radius="sm" />
+        <Badge content={5} color="danger" size="sm">
+          <Avatar src={props.avatar} radius="sm" />
+        </Badge>
       </div>
       <div className="flex-1 flex flex-col gap-1">
         <div className="flex justify-between items-center">
