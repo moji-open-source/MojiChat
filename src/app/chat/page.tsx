@@ -1,11 +1,11 @@
 import { ChatRoom } from "@/components/ChatRoom"
-import { MessageList } from "@/components/MessageList"
+import { ChatList } from "@/components/list/chat"
 
 function Chat() {
   return (
     <div className="chat flex">
       <div className="flex-shrink-0">
-        <MessageList />
+        <ChatList />
       </div>
 
       <div className="flex-grow overflow-hidden">
