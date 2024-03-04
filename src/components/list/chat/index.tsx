@@ -35,12 +35,10 @@ export function ChatList() {
 
 function ChatListItem(props: Chat) {
   return <>
-    <div className="flex w-full gap-2 pt-1.5 pb-1.5 pl-1 pr-1">
-      <div className="avatar">
-        <Badge content={5} color="danger" size="sm">
-          <Avatar src={props.avatar} radius="sm" />
-        </Badge>
-      </div>
+    <div className="grid grid-cols-[40px_auto] w-full gap-2 pt-1.5 pb-1.5 pl-1 pr-1">
+      <Badge content={5} color="danger" size="sm">
+        <Avatar src={props.avatar} radius="sm" />
+      </Badge>
       <div className="flex-1 flex flex-col gap-1">
         <div className="flex justify-between items-center">
           <span className="capitalize">{props.title}</span>
