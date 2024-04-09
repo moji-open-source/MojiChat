@@ -1,7 +1,7 @@
 import { useChatStore } from "@/store/hooks";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-export type Chat = {
+export interface Chat {
   id: number
   type: MessageType
   title: string,

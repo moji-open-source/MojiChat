@@ -30,8 +30,3 @@ fn main() {
 fn set_up(app: &mut App) {
   core::handle::Handle::global().init(app.app_handle());
 }
-
-// icon
-//"icons/128x128@2x.png",
-//"icons/icon.icns",
-//"icons/icon.ico"

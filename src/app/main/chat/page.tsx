@@ -1,5 +1,4 @@
 import ChatList from '@/components/ChatList'
-import Image from 'next/image'
 
 export default function Chat() {
   return (

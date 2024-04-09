@@ -29,7 +29,7 @@ export function ChatList() {
           </ListboxItem>
         )
       })}
-    </Listbox >
+    </Listbox>
   </>
 }
 
