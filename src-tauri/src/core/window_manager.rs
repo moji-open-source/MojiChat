@@ -176,7 +176,7 @@ impl WindowConfig {
 
   pub fn main_window() -> Self {
     let mut login_win_config =
-      WindowConfig::defautl("/chat".to_string(), "home".to_string(), "MoJi".to_string());
+      WindowConfig::defautl("/main".to_string(), "home".to_string(), "MoJi".to_string());
 
     login_win_config.inner_size = Some((1000.0, 750.0));
     login_win_config.min_inner_size = Some((820.0, 550.0));
