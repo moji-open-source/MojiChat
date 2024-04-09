@@ -1,4 +1,7 @@
-use tauri::{AppHandle, Theme, TitleBarStyle};
+#[cfg(target_os = "macos")]
+use tauri::TitleBarStyle;
+
+use tauri::{AppHandle, Theme};
 
 pub enum WindowType {
   Login,
@@ -27,6 +30,7 @@ pub struct WindowConfig {
   pub content_protected: Option<bool>,
   pub skip_taskbar: Option<bool>,
   pub theme: Option<Theme>,
+  #[cfg(target_os = "macos")]
   pub title_bar_style: Option<TitleBarStyle>,
   pub hidden_title: Option<bool>,
   pub accept_first_mouse: Option<bool>,
@@ -36,6 +40,7 @@ pub struct WindowConfig {
 
 impl WindowConfig {
   pub fn defautl(url: String, label: String, title: String) -> Self {
+    #[cfg(target_os = "macos")]
     let title_bar_style = TitleBarStyle::Visible;
     WindowConfig {
       label,
@@ -59,6 +64,7 @@ impl WindowConfig {
       content_protected: Some(false),
       skip_taskbar: Some(false),
       theme: None,
+      #[cfg(target_os = "macos")]
       title_bar_style: Some(title_bar_style),
       hidden_title: Some(false),
       accept_first_mouse: Some(false),
@@ -124,15 +130,20 @@ impl WindowConfig {
       new_window = new_window.skip_taskbar(skip_taskbar);
     }
     new_window = new_window.theme(self.theme);
+    #[cfg(target_os = "macos")]
     if let Some(title_bar_style) = self.title_bar_style.clone() {
       new_window = new_window.title_bar_style(title_bar_style);
     }
+
+    #[cfg(target_os = "macos")]
     if let Some(hidden_title) = self.hidden_title {
       new_window = new_window.hidden_title(hidden_title);
     }
+    #[cfg(target_os = "macos")]
     if let Some(accept_first_mouse) = self.accept_first_mouse {
       new_window = new_window.accept_first_mouse(accept_first_mouse);
     }
+    #[cfg(target_os = "macos")]
     if let Some(tabbing_identifier) = self.tabbing_identifier.as_ref() {
       new_window = new_window.tabbing_identifier(tabbing_identifier.as_str());
     }
@@ -153,7 +164,10 @@ impl WindowConfig {
     login_win_config.fullscreen = Some(false);
     login_win_config.inner_size = Some((330.0, 450.0));
     login_win_config.resizable = Some(false);
-    login_win_config.title_bar_style = Some(TitleBarStyle::Overlay);
+    #[cfg(target_os = "macos")]
+    {
+      login_win_config.title_bar_style = Some(TitleBarStyle::Overlay);
+    }
     login_win_config.hidden_title = Some(true);
     login_win_config.visible = Some(false);
 
@@ -161,15 +175,15 @@ impl WindowConfig {
   }
 
   pub fn main_window() -> Self {
-    let mut login_win_config = WindowConfig::defautl(
-      "/chat".to_string(),
-      "home".to_string(),
-      "MoJi".to_string(),
-    );
+    let mut login_win_config =
+      WindowConfig::defautl("/chat".to_string(), "home".to_string(), "MoJi".to_string());
 
     login_win_config.inner_size = Some((1000.0, 750.0));
     login_win_config.min_inner_size = Some((820.0, 550.0));
-    login_win_config.title_bar_style = Some(TitleBarStyle::Overlay);
+    #[cfg(target_os = "macos")]
+    {
+      login_win_config.title_bar_style = Some(TitleBarStyle::Overlay);
+    }
     login_win_config.hidden_title = Some(true);
     login_win_config.visible = Some(false);
 

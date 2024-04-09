@@ -9,7 +9,6 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-dark-modern-rgb: 24, 24, 24;
   --backgroond-rgb: var(--background-light-rgb);
   --border-color: #e6e7eb;
 }
@@ -24,9 +23,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
   background: rgb(var(--backgroond-rgb));
 }
 
