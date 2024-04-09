@@ -274,7 +274,8 @@ export function ChatRoom() {
     <>
       <div className="flex flex-col h-screen">
         <Card isFooterBlurred shadow="none" className="border-none flex-grow rounded-none" >
-          <CardHeader className="h-16 border-b-solid border-b-1 border-b-[var(--border-color)]" data-tauri-drag-region>
+          <CardHeader className="h-16 border-b-solid border-b-1 border-b-[var(--border-color)]"
+            data-tauri-drag-region>
             Moji Internal group
           </CardHeader>
 

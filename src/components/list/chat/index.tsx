@@ -18,6 +18,7 @@ export function ChatList() {
   }
 
   return <>
+    <div className="h-16 w-full" data-tauri-drag-region></div>
     <Listbox shouldHighlightOnFocus hideSelectedIcon selectionBehavior="toggle"
       selectionMode="single" disallowEmptySelection variant="flat" itemClasses={itemClasses}
       aria-label="Example with disabled actions"
