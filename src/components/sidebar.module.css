@@ -2,7 +2,10 @@
   width: 70px;
   box-sizing: border-box;
   padding-top: 70px;
-  border-right: 1px solid gainsboro;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--border-color);
+
   display: flex;
   flex-direction: column;
   align-items: center;

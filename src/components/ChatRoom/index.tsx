@@ -272,9 +272,11 @@ export function ChatRoom() {
 
   return (
     <>
-      <div className="border-solid border-1 flex flex-col h-screen">
-        <Card isFooterBlurred shadow="none" className="border-none flex-grow">
-          <CardHeader>Moji Internal group</CardHeader>
+      <div className="flex flex-col h-screen">
+        <Card isFooterBlurred shadow="none" className="border-none flex-grow rounded-none" >
+          <CardHeader className="h-16 border-b-solid border-b-1 border-b-[var(--border-color)]" data-tauri-drag-region>
+            Moji Internal group
+          </CardHeader>
 
           <CardBody>
             <div className="w-full">
@@ -292,7 +294,7 @@ export function ChatRoom() {
                       </div>
 
                       <div className="relative w-fit">
-                        <div className="chat-item-read-count" draggable>
+                        <div className="chat-item-read-count bg-gray-200  dark:bg-[#3b3b3d]" draggable>
                           {it.content}
                         </div>
                       </div>

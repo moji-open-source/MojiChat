@@ -1,10 +1,7 @@
-use std::{
-  clone,
-  sync::{Arc, Mutex},
-};
+use std::sync::{Arc, Mutex};
 
 use once_cell::sync::OnceCell;
-use tauri::{window, AppHandle, Manager};
+use tauri::{AppHandle, Manager};
 
 use super::window_manager::{WindowConfig, WindowType};
 

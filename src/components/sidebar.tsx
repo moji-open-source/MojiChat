@@ -1,11 +1,11 @@
 "use client"
-import { Badge, Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Image } from '@nextui-org/react'
+import { Badge, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Image } from '@nextui-org/react'
 import styles from './sidebar.module.css'
 
 
 export function Sidebar() {
   return <>
-    <div className={styles.sidebar} data-tauri-drag-region>
+    <div className={`${styles.sidebar}`} data-tauri-drag-region>
       <div className={styles.sidebarGroup}>
         <div className={styles.sidebarItem}>
           <Image src="/avatar.jpg" alt="avatar" width={45} height={45} radius="sm" isBlurred={false} />
