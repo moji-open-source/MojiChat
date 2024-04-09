@@ -1,4 +1,5 @@
 @import "@flaticon/flaticon-uicons/css/all/all";
+@import "./scrollbar.css";
 
 @tailwind base;
 @tailwind components;

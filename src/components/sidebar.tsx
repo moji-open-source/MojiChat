@@ -6,21 +6,21 @@ import styles from './sidebar.module.css'
 export function Sidebar() {
   return <>
     <div className={`${styles.sidebar}`} data-tauri-drag-region>
-      <div className={styles.sidebarGroup}>
+      <div className={styles.sidebarGroup} data-tauri-drag-region>
         <div className={styles.sidebarItem}>
           <Image src="/avatar.jpg" alt="avatar" width={45} height={45} radius="sm" isBlurred={false} />
         </div>
-        <div className={styles.sidebarItem}>
+        <div className={styles.sidebarItem} data-tauri-drag-region>
           <Badge content={16} color="primary" size="sm">
             <i className={`fi fi-rr-comment ${styles.sideBarItemIcon}`}></i>
           </Badge>
         </div>
-        <div className={styles.sidebarItem}>
+        <div className={styles.sidebarItem} data-tauri-drag-region>
           <i className={`fi fi-rr-users ${styles.sideBarItemIcon}`}></i>
         </div>
       </div>
 
-      <div className={styles.sidebarGroup}>
+      <div className={styles.sidebarGroup} data-tauri-drag-region>
         <div className={styles.sidebarItem}>
           <Dropdown>
             <DropdownTrigger>
