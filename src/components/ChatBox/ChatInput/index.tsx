@@ -7,7 +7,6 @@ import {
   createRef,
   forwardRef,
   memo,
-  useEffect,
   useImperativeHandle,
   useRef,
   useState,
@@ -105,7 +104,7 @@ function ChatInput(props: ChatInputProps, refs: ForwardedRef<ChatInputEvents>) {
     return {
       submit: () => submit()
     }
-  }, [])
+  }, [submit])
 
   return (
     <form

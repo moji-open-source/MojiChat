@@ -1,4 +1,5 @@
 "use client"
+
 import { Badge, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Image } from '@nextui-org/react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
@@ -38,7 +39,7 @@ export function Sidebar() {
               <DropdownItem key="edit" textValue="Setting">
                 <span>Setting</span>
               </DropdownItem>
-              <DropdownItem key="delete" className="text-danger" color="danger">
+              <DropdownItem key="delete" className="text-danger" color="danger" textValue="Logout">
                 <span>Logout</span>
               </DropdownItem>
             </DropdownMenu>

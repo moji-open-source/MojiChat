@@ -14,7 +14,7 @@ export function ChatList() {
   const { chats } = useChatStore()
 
   const itemClasses = {
-    base: 'list-item-selected'
+    base: 'aria-[selected=true]:bg-[hsl(var(--nextui-default)/0.4)]'
   }
 
   return <>
