@@ -1,0 +1,3 @@
+[submodule "src-tauri/src/protos"]
+	path = src-tauri/src/protos
+	url = git@github.com:moji-open-source/moji-chat-proto.git
