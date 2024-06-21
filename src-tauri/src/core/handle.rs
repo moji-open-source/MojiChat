@@ -3,7 +3,7 @@ use std::sync::{Arc, Mutex};
 use once_cell::sync::OnceCell;
 use tauri::{AppHandle, Manager};
 
-use super::window_manager::{WindowConfig, WindowType};
+use super::window_manager::{WindowManager, WindowType};
 
 #[derive(Debug, Default, Clone)]
 pub struct Handle {
@@ -39,28 +39,11 @@ impl Handle {
     let app_handle = binding.as_ref().unwrap();
 
     let window_config = match window_type {
-      WindowType::Login => WindowConfig::login_window(),
-      WindowType::Main => WindowConfig::main_window(),
+      WindowType::Login => WindowManager::login_window(),
+      WindowType::Main => WindowManager::main_window(),
     };
 
     let new_window = window_config.build(app_handle);
-
-    match new_window {
-      Ok(window) => {
-        let _ = window.show();
-        let _ = window.set_focus();
-        // let clone_window = window.clone();
-        // // 监听 WebView 加载完成事件
-        // window.listen("show-window", move |_| {
-        //   if !clone_window.is_visible().unwrap_or(false) {
-        //     let _ = clone_window.show();
-        //     //   // 当 WebView 加载完成后，显示窗口
-        //     //   let _ = clone_window.set_cursor_visible(true);
-        //     let _ = clone_window.set_focus();
-        //   }
-        // });
-      }
-      Err(_) => todo!(),
-    }
+    let _ = new_window.unwrap().show();
   }
 }
