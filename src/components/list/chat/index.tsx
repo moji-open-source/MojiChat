@@ -25,7 +25,7 @@ export function ChatList() {
     >
       {chats.map(chat => {
         return (
-          <ListboxItem key={chat.id}>
+          <ListboxItem key={chat.id} textValue="list box item">
             <ChatListItem {...chat} key={chat.id} />
           </ListboxItem>
         )
