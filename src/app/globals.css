@@ -5,8 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-}
+@layer components {}
 
 :root {
   --foreground-rgb: 0, 0, 0;

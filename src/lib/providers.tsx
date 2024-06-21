@@ -28,7 +28,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   }, [])
 
   return (
-    <ThemeProvider>
+    <ThemeProvider enableSystem enableColorScheme attribute="class">
       <NextUIProvider>
         <Provider store={store}>
           {children}
