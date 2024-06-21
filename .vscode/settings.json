@@ -1,0 +1,32 @@
+{
+  // not use prettier if any
+  "prettier.enable": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.rulers": [
+    120
+  ],
+  "errorLens.enabledDiagnosticLevels": [
+    "warning",
+    "error"
+  ],
+  "errorLens.excludeBySource": [
+    "cSpell",
+    "eslint"
+  ],
+  // it will cause the correct use of tailwindcss(@tailwind) to appear a warning. so ignore it
+  "css.lint.unknownAtRules": "ignore",
+  "eslint.rules.customizations": [],
+  "[rust]": {
+    "editor.rulers": [
+      120
+    ],
+  },
+  // close inner type hints
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+}
