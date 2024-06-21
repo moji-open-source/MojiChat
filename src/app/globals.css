@@ -26,14 +26,10 @@ body {
   background: rgb(var(--backgroond-rgb));
 }
 
-* {
+.diable-select-text {
   user-select: none;
   cursor: default;
   -webkit-user-drag: none;
-}
-
-input {
-  user-select: auto !important;
 }
 
 @layer components {

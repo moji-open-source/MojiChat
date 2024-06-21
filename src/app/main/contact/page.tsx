@@ -12,7 +12,7 @@ export default function Page() {
   }
 
   return <>
-    <div className="w-full h-screen">
+    <div className="w-full h-screen diable-select-text">
       <div className="w-[320px] h-full border-r-[var(--border-color)] border-r-solid border-r-1 overflow-y-auto">
         <Listbox shouldHighlightOnFocus hideSelectedIcon selectionBehavior="toggle"
           aria-label="contact list"

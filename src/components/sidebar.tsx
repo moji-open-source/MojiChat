@@ -10,7 +10,7 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return <>
-    <div className={`${styles.sidebar}`} data-tauri-drag-region>
+    <div className={`${styles.sidebar} diable-select-text`} data-tauri-drag-region>
       <div className={styles.sidebarGroup} data-tauri-drag-region>
         <div className={styles.sidebarItem}>
           <Image src="/avatar.jpg" alt="avatar" width={45} height={45} radius="sm" isBlurred={false} />

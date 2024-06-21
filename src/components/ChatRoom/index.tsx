@@ -274,22 +274,22 @@ export function ChatRoom() {
     <>
       <div className="flex flex-col h-screen">
         <Card isFooterBlurred shadow="none" className="border-none flex-grow rounded-none" >
-          <CardHeader className="h-16 border-b-solid border-b-1 border-b-[var(--border-color)]"
+          <CardHeader className="h-16 border-b-solid border-b-1 border-b-[var(--border-color)] diable-select-text"
             data-tauri-drag-region>
             Moji Internal group
           </CardHeader>
 
           <CardBody>
-            <div className="w-full">
+            <div className="w-full diable-select-text">
               {dataSources.map((it, index) => {
                 return (
-                  <div className={`chat-item ${it.isMe ? 'is-me' : ''}`} key={index}>
-                    <div className="avatar">
+                  <div className={`chat-item ${it.isMe ? 'is-me' : ''} diable-select-text`} key={index}>
+                    <div className="avatar diable-select-text">
                       <Avatar src={it.avatar} className="w-full h-full" />
                     </div>
 
                     <div className="chat-item-box">
-                      <div className="chat-item-user-info">
+                      <div className="chat-item-user-info diable-select-text">
                         <span>{it.name}</span>
                         <span className="text-gray-500">{it.time}</span>
                       </div>
