@@ -8,17 +8,19 @@
 * @author: Clover
 * @create: 2023-12-07 23:39
 */
+import Image from 'next/image'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useForm } from 'react-hook-form'
+import { Button, Checkbox, Input, Link } from '@nextui-org/react'
+
 import { EmailLoginRequest } from '@/ipc/user'
 import { closeCurrentWindowIpc } from '@/ipc/window'
 import { AppDispatch } from '@/store'
 import { useUserStore } from '@/store/hooks'
 import { emailLogin, getUserInfo } from '@/store/user'
+import { WindowDisplayController } from '@/components/helper/WindowDisplayController'
 import { EyeInvisibleOutlined, EyeOutlined, LockOutlined, UserOutlined } from '@ant-design/icons'
-import { Button, Checkbox, Input, Link } from '@nextui-org/react'
-import Image from 'next/image'
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { useDispatch } from 'react-redux'
 
 export default function Login() {
   const [isVisible, setIsSisible] = useState(false)
@@ -42,6 +44,8 @@ export default function Login() {
 
   return (
     <div data-tauri-drag-region className="bg-app w-full h-full">
+      <WindowDisplayController />
+
       <div
         data-tauri-drag-region
         className="flex justify-center pt-14 flex-col items-center w-4/5 m-auto h-full">

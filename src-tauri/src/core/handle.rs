@@ -31,7 +31,6 @@ impl Handle {
     main_win.map(|win| {
       win.close().unwrap();
     });
-    // main_win.close().expect("Window closing failure");
   }
 
   pub fn open_window(window_type: WindowType) {
@@ -43,7 +42,8 @@ impl Handle {
       WindowType::Main => WindowManager::main_window(),
     };
 
-    let new_window = window_config.build(app_handle);
-    let _ = new_window.unwrap().show();
+    // It renders a blank page because the page is rendered late :)
+    // It should not open here, but in the page mounted hook
+    let _ = window_config.build(app_handle);
   }
 }
