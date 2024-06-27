@@ -7,7 +7,7 @@
     "distDir": "../out"
   },
   "package": {
-    "productName": "墨迹",
+    "productName": "Moji",
     "version": "0.1.0"
   },
   "tauri": {

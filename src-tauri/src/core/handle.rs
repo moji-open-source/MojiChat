@@ -41,7 +41,6 @@ impl Handle {
       WindowType::Login => WindowManager::login_window(),
       WindowType::Main => WindowManager::main_window(),
     };
-
     // It renders a blank page because the page is rendered late :)
     // It should not open here, but in the page mounted hook
     let _ = window_config.build(app_handle);
