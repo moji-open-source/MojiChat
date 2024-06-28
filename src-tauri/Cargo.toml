@@ -5,7 +5,7 @@ description = "A Tauri App"
 authors = ["Clover You"]
 license = ""
 repository = ""
-default-run = "app"
+default-run = "Moji"
 edition = "2021"
 rust-version = "1.60"
 
