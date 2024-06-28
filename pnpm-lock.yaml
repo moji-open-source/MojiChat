@@ -14,9 +14,6 @@ importers:
       '@flaticon/flaticon-uicons':
         specifier: ^3.3.1
         version: 3.3.1
-      '@heroicons/react':
-        specifier: ^2.1.4
-        version: 2.1.4(react@18.3.1)
       '@nextui-org/react':
         specifier: ^2.4.2
         version: 2.4.2(@types/react@18.3.3)(framer-motion@11.2.11(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)
@@ -35,9 +32,6 @@ importers:
       dayjs:
         specifier: ^1.11.11
         version: 1.11.11
-      framer-motion:
-        specifier: ^11.2.11
-        version: 11.2.11(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: 14.2.4
         version: 14.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -308,11 +302,6 @@ packages:
 
   '@formatjs/intl-localematcher@0.5.4':
     resolution: {integrity: sha512-zTwEpWOzZ2CiKcB93BLngUX59hQkuZjT2+SAQEscSm52peDW/getsawMcWF1rGRpMCX6D7nSJA3CzJ8gn13N/g==}
-
-  '@heroicons/react@2.1.4':
-    resolution: {integrity: sha512-ju0wj0wwrUTMQ2Yceyrma7TKuI3BpSjp+qKqV81K9KGcUHdvTMdiwfRc2cwXBp3uXtKuDZkh0v03nWOQnJFv2Q==}
-    peerDependencies:
-      react: '>= 16'
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -3475,10 +3464,6 @@ snapshots:
   '@formatjs/intl-localematcher@0.5.4':
     dependencies:
       tslib: 2.6.3
-
-  '@heroicons/react@2.1.4(react@18.3.1)':
-    dependencies:
-      react: 18.3.1
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
