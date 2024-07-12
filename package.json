@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port=4130",
+    "dev": "next dev --port=4130 --turbo",
     "test": "vitest",
     "build": "next build",
     "start": "next start",
@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
-    "@flaticon/flaticon-uicons": "^3.3.1",
     "@nextui-org/react": "^2.4.2",
     "@react-aria/selection": "^3.18.1",
     "@react-stately/list": "^3.10.5",
