@@ -1,6 +1,5 @@
 "use client"
 
-import { EyeInvisibleOutlined, EyeOutlined, LockOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Checkbox, Input, Link } from '@nextui-org/react'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -44,7 +43,7 @@ export function LoginForm() {
             color={form.formState.errors.email && 'danger'}
             {...form.register("email", { required: true })}
             startContent={
-              <UserOutlined className="text-default-400 pointer-events-none flex-shrink-0" />
+              <span className="icon-[ant-design--user-outlined] text-default-400 pointer-events-none flex-shrink-0"></span>
             }
           />
 
@@ -55,18 +54,17 @@ export function LoginForm() {
             color={form.formState.errors.psd && 'danger'}
             {...form.register("psd", { required: true })}
             startContent={
-              <LockOutlined className="text-default-400 pointer-events-none flex-shrink-0" />
+              <span className="icon-[ant-design--lock-outlined] text-default-400 pointer-events-none flex-shrink-0"></span>
             }
             endContent={
               <button
                 className="focus:outline-none inline-flex"
                 type="button"
                 onClick={toggleVisibility}>
-                {isVisible ? <EyeInvisibleOutlined /> : <EyeOutlined />}
+                <span style={{ fontSize: 18 }} className={`${isVisible ? 'icon-[ant-design--eye-invisible-outlined]' : 'icon-[ant-design--eye-outlined]'}`}></span>
               </button>
             }
           />
-
           <div className="flex space-x-2 justify-between" data-tauri-drag-region>
             <Checkbox defaultSelected size="sm">
               记住密码

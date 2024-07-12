@@ -1,5 +1,6 @@
-import { nextui } from '@nextui-org/react'
-import type { Config } from 'tailwindcss'
+import { addDynamicIconSelectors } from '@iconify/tailwind';
+import { nextui } from '@nextui-org/react';
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -13,6 +14,7 @@ const config: Config = {
   },
   darkMode: 'media',
   plugins: [
+    addDynamicIconSelectors(),
     nextui({
       themes: {
         dark: {

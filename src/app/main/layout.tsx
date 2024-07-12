@@ -1,5 +1,5 @@
 import { Sidebar } from '@/components/sidebar'
-import { Providers } from '@/lib/providers'
+// import { Providers } from '@/lib/providers'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

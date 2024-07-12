@@ -1,13 +1,16 @@
 "use client"
 
+import { Pathname } from '@/enum/pathname.enum'
 import { Badge, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Image } from '@nextui-org/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './sidebar.module.css'
 
-
 export function Sidebar() {
   const pathname = usePathname()
+
+  const isChatPage = pathname === Pathname.Chat
+  const isContactPage = pathname === Pathname.Contact
 
   return <>
     <div className={`${styles.sidebar} diable-select-text`} data-tauri-drag-region>
@@ -18,13 +21,15 @@ export function Sidebar() {
         <div className={styles.sidebarItem} data-tauri-drag-region>
           <Link href="/main/chat">
             <Badge content={16} color="primary" size="sm">
-              <i className={`fi ${pathname === '/main/chat' ? 'fi-sr-comment' : 'fi-rr-comment'} ${styles.sideBarItemIcon}`}></i>
+              <span
+                className={`${isChatPage ? 'icon-[solar--chat-line-bold]' : 'icon-[solar--chat-line-bold-duotone]'} ${styles.sideBarItemIcon}`}
+              ></span>
             </Badge>
           </Link>
         </div>
         <div className={styles.sidebarItem} data-tauri-drag-region>
           <Link href="/main/contact">
-            <i className={`fi ${pathname === '/main/contact' ? 'fi-sr-users' : 'fi-rr-users'} ${styles.sideBarItemIcon}`}></i>
+            <span className={`${isContactPage ? 'icon-[weui--contacts-filled]' : 'icon-[weui--contacts-outlined]'} ${styles.sideBarItemIcon}`}></span>
           </Link>
         </div>
       </div>
@@ -33,7 +38,8 @@ export function Sidebar() {
         <div className={styles.sidebarItem}>
           <Dropdown>
             <DropdownTrigger>
-              <i className={`fi fi-rr-menu-burger ${styles.sideBarItemIcon}`}></i>
+              <span className={`icon-[hugeicons--text-indent-more] ${styles.sideBarItemIcon}`}></span>
+              {/* <i className={`fi fi-rr-menu-burger ${styles.sideBarItemIcon}`}></i> */}
             </DropdownTrigger>
             <DropdownMenu aria-label="Example with disabled actions" >
               <DropdownItem key="edit" textValue="Setting">

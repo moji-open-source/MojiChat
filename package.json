@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port=4130 --turbo",
+    "dev": "next dev --port=4130",
     "test": "vitest",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.3.7",
     "@nextui-org/react": "^2.4.2",
     "@react-aria/selection": "^3.18.1",
     "@react-stately/list": "^3.10.5",
@@ -26,6 +25,12 @@
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
+    "@iconify-json/ant-design": "^1.1.16",
+    "@iconify-json/hugeicons": "^1.1.0",
+    "@iconify-json/solar": "^1.1.9",
+    "@iconify-json/uil": "^1.1.8",
+    "@iconify-json/weui": "^1.1.0",
+    "@iconify/tailwind": "^1.1.1",
     "@tauri-apps/cli": "^1.6.0",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
