@@ -1,6 +1,5 @@
-import { ChatRoom } from "@/components/ChatRoom"
+import { ChatWidget, RecentContactWidget, } from '@/components/chat'
 import { WindowDisplayController } from '@/components/helper/WindowDisplayController'
-import { ChatList } from "@/components/list/chat"
 
 function Chat() {
   return (
@@ -8,11 +7,11 @@ function Chat() {
       <WindowDisplayController />
 
       <div className="flex-shrink-0 border-r-[var(--border-color)] border-r-solid border-r-1 diable-select-text">
-        <ChatList />
+        <RecentContactWidget />
       </div>
 
       <div className="flex-grow overflow-hidden">
-        <ChatRoom />
+        <ChatWidget />
       </div>
     </div>
   )

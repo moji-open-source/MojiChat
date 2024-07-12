@@ -3,14 +3,14 @@
 import { Chat } from "@/store/chat";
 import { useChatStore } from "@/store/hooks";
 import {
-  Listbox,
-  ListboxItem,
   Avatar,
-  Badge
+  Badge,
+  Listbox,
+  ListboxItem
 } from "@nextui-org/react";
 import dayjs from "dayjs";
 
-export function ChatList() {
+export function RecentContactWidget() {
   const { chats } = useChatStore()
 
   const itemClasses = {

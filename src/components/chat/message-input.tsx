@@ -1,18 +1,14 @@
+"use client"
+
 import { Button } from '@nextui-org/react'
 import {
   ClipboardEvent,
-  FormEvent,
-  ForwardedRef,
-  KeyboardEvent,
-  createRef,
-  forwardRef,
-  memo,
-  useImperativeHandle,
-  useRef,
-  useState,
+  FormEvent, KeyboardEvent,
+  createRef, useRef,
+  useState
 } from 'react'
 
-import classs from './ChatInput.module.css'
+import classs from './message-input.module.css'
 
 export interface ChatInputProps {
   onSubmit?: (message: string | null) => Promise<boolean>
@@ -22,7 +18,7 @@ export interface ChatInputEvents {
   submit: () => void
 }
 
-function ChatInput(props: ChatInputProps, refs: ForwardedRef<ChatInputEvents>) {
+export function MessageInput(props: ChatInputProps) {
   const formRef = createRef<HTMLFormElement>()
   const [chatMessage, setChatMessage] = useState<string | null>(null)
   // 记录当前 input 是否处于组合输入状态,例如中文输入法
@@ -100,12 +96,6 @@ function ChatInput(props: ChatInputProps, refs: ForwardedRef<ChatInputEvents>) {
     }
   }
 
-  useImperativeHandle(refs, () => {
-    return {
-      submit: () => submit()
-    }
-  }, [submit])
-
   return (
     <form
       ref={formRef}
@@ -159,5 +149,3 @@ function ChatInput(props: ChatInputProps, refs: ForwardedRef<ChatInputEvents>) {
     </form >
   )
 }
-
-export default memo(forwardRef(ChatInput))

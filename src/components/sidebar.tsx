@@ -1,8 +1,8 @@
 "use client"
 
 import { Badge, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Image } from '@nextui-org/react'
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from './sidebar.module.css'
 
 

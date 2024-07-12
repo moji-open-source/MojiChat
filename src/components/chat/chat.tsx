@@ -3,7 +3,7 @@
 import { Avatar, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react'
 import { useState } from 'react'
 
-import ChatInput from '@/components/ChatBox/ChatInput'
+import { MessageInput } from '@/components/chat'
 
 const dataList = [
   {
@@ -252,7 +252,7 @@ const dataList = [
   }
 ]
 
-export function ChatRoom() {
+export function ChatWidget() {
   const [dataSources, setDataSources] = useState(dataList)
   function onSubmitHandler(message: string | null) {
     setDataSources((dataList) => {
@@ -307,7 +307,7 @@ export function ChatRoom() {
           </CardBody>
 
           <CardFooter className="flex-shrink-0 sticky border-white/20 border-1 overflow-hidden py-1  rounded-large bottom-2 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-            <ChatInput onSubmit={onSubmitHandler} />
+            <MessageInput onSubmit={onSubmitHandler} />
           </CardFooter>
         </Card>
       </div>
