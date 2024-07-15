@@ -61,6 +61,9 @@ export function MessageInput(props: ChatInputProps) {
   function submit() {
     const submitEvent = new Event('submit', { bubbles: true, cancelable: true })
     formRef.current?.dispatchEvent(submitEvent)
+
+    // clean up the input message after submitting the message
+    clearEditorContent()
   }
 
   function onKeyDownHandler(event: KeyboardEvent<HTMLDivElement>) {
