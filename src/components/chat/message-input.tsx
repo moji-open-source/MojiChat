@@ -53,9 +53,8 @@ export function MessageInput(props: ChatInputProps) {
    */
   function clearEditorContent() {
     setChatMessage(null)
-    //TODO editorRef 不知道为什么是 null
-    if (editorRef.current == void 0) return
-    editorRef.current.innerHTML = ''
+    if (editorRef.current)
+      editorRef.current.innerHTML = ''
   }
 
   function submit() {
