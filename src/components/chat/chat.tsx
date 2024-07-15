@@ -1,7 +1,10 @@
 'use client'
 
-import { Avatar, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react'
-import { useState } from 'react'
+import { Avatar } from '@nextui-org/react'
+import dayjs from 'dayjs'
+import React, { createRef, useEffect, useState } from 'react'
+
+import { useScroll } from '@/hooks'
 
 import { MessageInput } from '@/components/chat'
 
@@ -253,15 +256,23 @@ const dataList = [
 ]
 
 export function ChatWidget() {
+  const { scrollToBottom } = useScroll()
+  const [chat] = useState({
+    title: 'Moji Internal group',
+    id: 6,
+    chatType: 'Group'
+  })
   const [dataSources, setDataSources] = useState(dataList)
   function onSubmitHandler(message: string | null) {
+    if (!message) return Promise.resolve(false)
+
     setDataSources((dataList) => {
       return [
         ...dataList,
         {
           avatar: '/avatar.jpg',
           name: 'Clover',
-          time: '2023-12-28 03:45:02',
+          time: dayjs().format('YYYY-MM-DD hh:mm'),
           content: message ?? '',
           isMe: true
         }
@@ -270,47 +281,62 @@ export function ChatWidget() {
     return Promise.resolve(true)
   }
 
+  const chatDivRef = createRef<HTMLDivElement>()
+
+  useEffect(() => {
+    const chatDiv = chatDivRef.current
+    if (!chatDiv) return
+
+    scrollToBottom(chatDiv)
+  }, [dataSources])
+
   return (
     <>
-      <div className="flex flex-col h-screen">
-        <Card isFooterBlurred shadow="none" className="border-none flex-grow rounded-none" >
-          <CardHeader className="h-16 border-b-solid border-b-1 border-b-[var(--border-color)] diable-select-text"
-            data-tauri-drag-region>
-            Moji Internal group
-          </CardHeader>
+      <div className="flex flex-col h-screen overflow-hidden">
+        <ChatHeader className="flex-shrink-0">{chat.title}</ChatHeader>
 
-          <CardBody>
-            <div className="w-full diable-select-text">
-              {dataSources.map((it, index) => {
-                return (
-                  <div className={`chat-item ${it.isMe ? 'is-me' : ''} diable-select-text`} key={index}>
-                    <div className="avatar diable-select-text">
-                      <Avatar src={it.avatar} className="w-full h-full" />
-                    </div>
+        <div className="w-full diable-select-text overflow-x-hidden overflow-y-auto p-4" ref={chatDivRef}>
+          {dataSources.map((it, index) => {
+            return (
+              <div className={`chat-item ${it.isMe ? 'is-me' : ''} diable-select-text`} key={index}>
+                <div className="avatar diable-select-text">
+                  <Avatar src={it.avatar} className="w-full h-full" />
+                </div>
 
-                    <div className="chat-item-box">
-                      <div className="chat-item-user-info diable-select-text">
-                        <span>{it.name}</span>
-                        <span className="text-gray-500">{it.time}</span>
-                      </div>
+                <div className="chat-item-box">
+                  <div className="chat-item-user-info diable-select-text">
+                    <span>{it.name}</span>
+                    <span className="text-gray-500">{it.time}</span>
+                  </div>
 
-                      <div className="relative w-fit">
-                        <div className="chat-item-read-count bg-gray-200  dark:bg-[#3b3b3d]" draggable>
-                          {it.content}
-                        </div>
-                      </div>
+                  <div className="relative w-fit">
+                    <div className="chat-item-read-count bg-gray-200  dark:bg-[#3b3b3d]" draggable>
+                      {it.content}
                     </div>
                   </div>
-                )
-              })}
-            </div>
-          </CardBody>
+                </div>
+              </div>
+            )
+          })}
+        </div>
 
-          <CardFooter className="flex-shrink-0 sticky border-white/20 border-1 overflow-hidden py-1  rounded-large bottom-2 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-            <MessageInput onSubmit={onSubmitHandler} />
-          </CardFooter>
-        </Card>
+        <div className="p-4">
+          <MessageInput onSubmit={onSubmitHandler} />
+        </div>
       </div>
     </>
+  )
+}
+
+const ChatHeader = (
+  { children, className }: React.PropsWithChildren & { className?: string }
+) => {
+  return (
+    <div
+      className={`h-16 border-b-solid border-b-1 border-b-[var(--border-color)] flex items-center p-4 diable-select-text ${className}`}
+      data-tauri-drag-region
+    >
+      {children}
+    </div>
   )
 }
