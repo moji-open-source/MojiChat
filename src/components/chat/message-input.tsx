@@ -100,9 +100,9 @@ export function MessageInput(props: ChatInputProps) {
     <form
       ref={formRef}
       onSubmit={onSubmitHandler}
-      className="gap-2 flex items-center justify-between w-full"
+      className="flex items-end justify-between w-full"
     >
-      <div className="flex items-center pl-1 pr-2 py-2 mx-1 flex-grow text-sm focus:border-solid relative overflow-hidden">
+      <div className="flex pl-1 pr-2 py-2 mx-1 flex-grow text-sm focus:border-solid relative overflow-hidden">
         <div
           ref={editorRef}
           className={classs.editor}
@@ -117,11 +117,7 @@ export function MessageInput(props: ChatInputProps) {
           onInput={onEditorChangeHandler}
           contentEditable
           data-placeholder="Say something~"
-        />
-
-        <div className="cursor-pointer text-gray-400" onClick={onCapturedAudioHandler}>
-          <i className="fi fi-rr-waveform-path align-middle leading-[0.5] cursor-pointer"></i>
-        </div>
+        ></div>
       </div>
 
       <Button
@@ -130,15 +126,27 @@ export function MessageInput(props: ChatInputProps) {
         size="sm"
         radius="full"
         className="text-2xl border-none text-default-500"
+        onClick={onCapturedAudioHandler}
         disableRipple
       >
-        <i className="fi fi-rr-grin-beam  align-middle leading-[0.5]"></i>
+        <span className="icon-[f7--waveform]"></span>
       </Button>
 
       <Button
-        startContent={<i className="fi fi-rr-paper-plane align-middle leading-[0.5]"></i>}
+        isIconOnly
+        variant="bordered"
+        size="sm"
+        radius="full"
+        className="text-2xl border-none text-default-500 mr-1"
+        disableRipple
+      >
+        <span className="icon-[fluent--emoji-meme-24-regular]"></span>
+      </Button>
+
+      <Button
+        startContent={<span className="icon-[lets-icons--send-fill] align-middle leading-[0.5] size-6"></span>}
         type="submit"
-        className="text-tiny text-white bg-black/20 bg-primary"
+        className="text-tiny text-white bg-black/20 bg-primary flex-shrink-0"
         variant="flat"
         color="default"
         radius="lg"
