@@ -11,12 +11,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.4.2",
-    "@react-aria/selection": "^3.18.1",
-    "@react-stately/list": "^3.10.5",
+    "@nextui-org/react": "^2.4.6",
+    "@react-aria/selection": "^3.19.1",
+    "@react-stately/list": "^3.10.7",
     "@reduxjs/toolkit": "^2.2.6",
     "@tauri-apps/api": "^1.6.0",
-    "dayjs": "^1.11.11",
+    "dayjs": "^1.11.12",
     "next": "14.2.5",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@iconify-json/ant-design": "^1.1.16",
     "@iconify-json/f7": "^1.1.0",
-    "@iconify-json/fluent": "^1.1.58",
+    "@iconify-json/fluent": "^1.1.59",
     "@iconify-json/hugeicons": "^1.1.0",
     "@iconify-json/lets-icons": "^1.1.2",
     "@iconify-json/solar": "^1.1.9",
@@ -36,15 +36,15 @@
     "@iconify-json/weui": "^1.1.0",
     "@iconify/tailwind": "^1.1.1",
     "@tauri-apps/cli": "^1.6.0",
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.6.0",
+    "eslint": "^9.7.0",
     "eslint-config-next": "14.2.5",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.3",
-    "vitest": "^2.0.2"
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.4"
   }
 }
