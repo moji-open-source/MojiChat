@@ -7,11 +7,6 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx,mdx,css}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
-  theme: {
-    extend: {
-
-    },
-  },
   darkMode: 'media',
   plugins: [
     addDynamicIconSelectors(),
