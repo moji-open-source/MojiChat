@@ -9,10 +9,10 @@ import { useEffect } from 'react'
 export function Providers({ children }: { children: React.ReactNode }) {
   function onKeydownListener(event: KeyboardEvent) {
     if (event.metaKey) {
-      if (event.key === '=' || event.key === '-') {
+      if (event.key === '=' || event.key === '-') 
         event.preventDefault()
         // document.body.style.zoom = zoom.current += event.key === '=' ? 0.1 : -0.1
-      }
+      
 
     }
 

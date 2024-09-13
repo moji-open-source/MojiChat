@@ -263,6 +263,7 @@ export function ChatWidget() {
     chatType: 'Group'
   })
   const [dataSources, setDataSources] = useState(dataList)
+
   function onSubmitHandler(message: string | null) {
     if (!message) return Promise.resolve(false)
 

@@ -20,9 +20,8 @@ export function ContactListWidget() {
     }}
     selectedKeys={selectedKeys}
     onSelectionChange={(keys) => {
-      if (keys instanceof Set) {
+      if (keys instanceof Set)
         setSelectedKeys(keys)
-      }
     }}
   >
     {items.map(id => {
