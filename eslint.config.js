@@ -20,7 +20,7 @@ export default [
 
   {
     rules: {
-      semi: ['error', 'never'],
+      semi: ['warn', 'never'],
       quotes: ['warn', 'single'],
       'no-var': 'warn',
       'prefer-const': 'error',
