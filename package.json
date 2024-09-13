@@ -8,7 +8,7 @@
     "test": "vitest",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --flag unstable_ts_config"
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.6",
@@ -26,6 +26,7 @@
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
     "@iconify-json/ant-design": "^1.1.16",
     "@iconify-json/f7": "^1.1.0",
     "@iconify-json/fluent": "^1.1.59",
@@ -36,15 +37,19 @@
     "@iconify-json/weui": "^1.1.0",
     "@iconify/tailwind": "^1.1.1",
     "@tauri-apps/cli": "^1.6.0",
+    "@types/eslint": "^9.6.1",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.7.0",
-    "eslint-config-next": "14.2.5",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.36.1",
+    "globals": "^15.9.0",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4",
+    "typescript-eslint": "^8.5.0",
     "vitest": "^2.0.4"
   }
 }

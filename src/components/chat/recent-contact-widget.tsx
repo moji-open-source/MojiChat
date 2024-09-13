@@ -1,14 +1,14 @@
 'use client'
 
-import { Chat } from "@/store/chat";
-import { useChatStore } from "@/store/hooks";
+import { Chat } from '@/store/chat'
+import { useChatStore } from '@/store/hooks'
 import {
   Avatar,
   Badge,
   Listbox,
   ListboxItem
-} from "@nextui-org/react";
-import dayjs from "dayjs";
+} from '@nextui-org/react'
+import dayjs from 'dayjs'
 
 export function RecentContactWidget() {
   const { chats } = useChatStore()

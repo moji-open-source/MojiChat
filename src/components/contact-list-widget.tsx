@@ -1,11 +1,11 @@
-"use client"
-import { Listbox, ListboxItem, User } from "@nextui-org/react";
-import React from "react";
+'use client'
+import { Listbox, ListboxItem, User } from '@nextui-org/react'
+import React from 'react'
 
 export function ContactListWidget() {
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set<string | number>());
+  const [selectedKeys, setSelectedKeys] = React.useState(new Set<string | number>())
 
-  const items = [] as number[];
+  const items = [] as number[]
 
   for (let i = 0; i < 100; i++)
     items.push(i)
@@ -16,7 +16,7 @@ export function ContactListWidget() {
     selectionMode="single"
     disallowEmptySelection
     itemClasses={{
-      base: "aria-[selected=true]:bg-[hsl(var(--nextui-default)/0.4)]"
+      base: 'aria-[selected=true]:bg-[hsl(var(--nextui-default)/0.4)]'
     }}
     selectedKeys={selectedKeys}
     onSelectionChange={(keys) => {
@@ -31,7 +31,7 @@ export function ContactListWidget() {
           name="Clover You"
           description="Product Designer"
           avatarProps={{
-            src: "/avatar.jpg"
+            src: '/avatar.jpg'
           }} />
       </ListboxItem>
     })}

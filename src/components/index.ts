@@ -1,1 +1,1 @@
-export * from './contact-list-widget';
+export * from './contact-list-widget'

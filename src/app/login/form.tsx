@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Button, Checkbox, Input, Link } from '@nextui-org/react'
 import Image from 'next/image'
@@ -23,9 +23,15 @@ export function LoginForm() {
       setIsLoading(true)
       const result = await dispatch(emailLogin(data))
       const userInfo = await dispatch(getUserInfo())
+
+      console.log('result', result)
+      console.log('userInfo', userInfo)
+
       setIsLoading(false)
-      await closeCurrentWindowIpc("login_win")
+      await closeCurrentWindowIpc('login_win')
     } catch (e) {
+      console.error(e)
+
       setIsLoading(false)
     }
   }
@@ -41,18 +47,18 @@ export function LoginForm() {
             placeholder="请输入账号"
             labelPlacement="outside"
             color={form.formState.errors.email && 'danger'}
-            {...form.register("email", { required: true })}
+            {...form.register('email', { required: true })}
             startContent={
               <span className="icon-[ant-design--user-outlined] text-default-400 pointer-events-none flex-shrink-0"></span>
             }
           />
 
           <Input
-            type={isVisible ? "text" : "password"}
+            type={isVisible ? 'text' : 'password'}
             placeholder="请输入密码"
             labelPlacement="outside"
             color={form.formState.errors.psd && 'danger'}
-            {...form.register("psd", { required: true })}
+            {...form.register('psd', { required: true })}
             startContent={
               <span className="icon-[ant-design--lock-outlined] text-default-400 pointer-events-none flex-shrink-0"></span>
             }

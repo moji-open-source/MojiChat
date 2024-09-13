@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Pathname } from '@/enum/pathname.enum'
 import { Badge, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Image } from '@nextui-org/react'

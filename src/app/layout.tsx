@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light" style={{
-      colorScheme: "light"
+      colorScheme: 'light'
     }}>
       <body className={inter.className}>
         <Providers>{children}</Providers>

@@ -1,6 +1,6 @@
-import { describe, expect, test, vi } from "vitest"
+import { describe, expect, test, vi } from 'vitest'
 
-import { useScroll } from "./useScroll"
+import { useScroll } from './useScroll'
 
 describe('useScroll', () => {
   test('should scroll to bottom', () => {

@@ -14,7 +14,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/d1640db1-a100-472c-9c9e-4de5b45f2000/width=1024,height=1024,fit=cover',
     name: 'Alice',
     time: '2023-12-28 03:45:02',
-    content: "I'm planning a trip next month, any suggestions?",
+    content: 'I\'m planning a trip next month, any suggestions?',
     isMe: false
   },
   {
@@ -22,7 +22,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/d1640db1-a100-472c-9c9e-4de5b45f2000/width=1024,height=1024,fit=cover',
     name: 'Alice',
     time: '2023-12-28 03:45:02',
-    content: "Who's up for a game night this Friday?",
+    content: 'Who\'s up for a game night this Friday?',
     isMe: false
   },
   {
@@ -30,7 +30,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/0060ddc8-e40b-4f47-e249-3fcee9f9de00/width=1024,height=1024,fit=cover',
     name: 'Charlit',
     time: '2023-12-28 03:45:02',
-    content: "Hey everyone, how's it going?",
+    content: 'Hey everyone, how\'s it going?',
     isMe: false
   },
   {
@@ -54,7 +54,7 @@ const dataList = [
     avatar: '/avatar.jpg',
     name: 'Clover',
     time: '2023-12-28 03:45:02',
-    content: "I need some advice on a project I'm working on.",
+    content: 'I need some advice on a project I\'m working on.',
     isMe: true
   },
   {
@@ -78,7 +78,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/1c50def6-f007-466f-1c3c-dfb66fbee700/width=1024,height=1024,fit=cover',
     name: 'Bob',
     time: '2023-12-28 03:45:02',
-    content: "Who's up for a game night this Friday?",
+    content: 'Who\'s up for a game night this Friday?',
     isMe: false
   },
   {
@@ -86,7 +86,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/d1640db1-a100-472c-9c9e-4de5b45f2000/width=1024,height=1024,fit=cover',
     name: 'Alice',
     time: '2023-12-28 03:45:02',
-    content: "I can't believe it's already the weekend!",
+    content: 'I can\'t believe it\'s already the weekend!',
     isMe: false
   },
   {
@@ -94,7 +94,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/0060ddc8-e40b-4f47-e249-3fcee9f9de00/width=1024,height=1024,fit=cover',
     name: 'Charlit',
     time: '2023-12-28 03:45:02',
-    content: "I can't believe it's already the weekend!",
+    content: 'I can\'t believe it\'s already the weekend!',
     isMe: false
   },
   {
@@ -117,7 +117,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/1c50def6-f007-466f-1c3c-dfb66fbee700/width=1024,height=1024,fit=cover',
     name: 'Bob',
     time: '2023-12-28 03:45:02',
-    content: "I'm planning a trip next month, any suggestions?",
+    content: 'I\'m planning a trip next month, any suggestions?',
     isMe: false
   },
   {
@@ -133,14 +133,14 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/1c50def6-f007-466f-1c3c-dfb66fbee700/width=1024,height=1024,fit=cover',
     name: 'Bob',
     time: '2023-12-28 03:45:02',
-    content: "Hey everyone, how's it going?",
+    content: 'Hey everyone, how\'s it going?',
     isMe: false
   },
   {
     avatar: '/avatar.jpg',
     name: 'Clover',
     time: '2023-12-28 03:45:02',
-    content: "I can't believe it's already the weekend!",
+    content: 'I can\'t believe it\'s already the weekend!',
     isMe: true
   },
   {
@@ -148,7 +148,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/4ac4f1db-2459-4d31-85f2-8be024f73400/width=1024,height=1024,fit=cover',
     name: 'Eve',
     time: '2023-12-28 03:45:02',
-    content: "Who's up for a game night this Friday?",
+    content: 'Who\'s up for a game night this Friday?',
     isMe: false
   },
   {
@@ -156,7 +156,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/d1640db1-a100-472c-9c9e-4de5b45f2000/width=1024,height=1024,fit=cover',
     name: 'Alice',
     time: '2023-12-28 03:45:02',
-    content: "I need some advice on a project I'm working on.",
+    content: 'I need some advice on a project I\'m working on.',
     isMe: false
   },
   {
@@ -203,7 +203,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/d1640db1-a100-472c-9c9e-4de5b45f2000/width=1024,height=1024,fit=cover',
     name: 'Alice',
     time: '2023-12-28 03:45:02',
-    content: "Hey everyone, how's it going?",
+    content: 'Hey everyone, how\'s it going?',
     isMe: false
   },
   {
@@ -211,7 +211,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/4ac4f1db-2459-4d31-85f2-8be024f73400/width=1024,height=1024,fit=cover',
     name: 'Eve',
     time: '2023-12-28 03:45:02',
-    content: "I'm planning a trip next month, any suggestions?",
+    content: 'I\'m planning a trip next month, any suggestions?',
     isMe: false
   },
   {
@@ -226,7 +226,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/0060ddc8-e40b-4f47-e249-3fcee9f9de00/width=1024,height=1024,fit=cover',
     name: 'Charlit',
     time: '2023-12-28 03:45:02',
-    content: "I can't believe it's already the weekend!",
+    content: 'I can\'t believe it\'s already the weekend!',
     isMe: false
   },
   {
@@ -234,7 +234,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/1c50def6-f007-466f-1c3c-dfb66fbee700/width=1024,height=1024,fit=cover',
     name: 'Bob',
     time: '2023-12-28 03:45:02',
-    content: "Who's up for a game night this Friday?",
+    content: 'Who\'s up for a game night this Friday?',
     isMe: false
   },
   {
@@ -250,7 +250,7 @@ const dataList = [
       'https://imagedelivery.net/NuIlS-icgS-GBz54pfagaw/4ac4f1db-2459-4d31-85f2-8be024f73400/width=1024,height=1024,fit=cover',
     name: 'Eve',
     time: '2023-12-28 03:45:02',
-    content: "I need some advice on a project I'm working on.",
+    content: 'I need some advice on a project I\'m working on.',
     isMe: false
   }
 ]
