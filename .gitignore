@@ -39,3 +39,8 @@ next-env.d.ts
 
 # intellij idea config file
 .idea
+
+# lint
+.eslintcache
+
+vite.config.ts.timestamp-*
