@@ -9,14 +9,12 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --backgroond-rgb: var(--background-light-rgb);
-  --border-color: #e6e7eb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 223, 223, 223;
     --backgroond-rgb: var(--background-dark-rgb);
-    --border-color: #414141;
   }
 }
 
@@ -71,5 +69,22 @@ body {
 
   .list-item-selected {
     @apply data-[selected="true"]:aria-selected:bg-[hsl(var(--nextui-default)/0.4)];
+  }
+}
+
+@layer base {
+  :root {
+    --border: 0, 0%, 84.71%;
+    --input-border: 0, 0%, 84.71%;
+  }
+
+  .dark {
+    --border: 240, 1.89%, 20.78%;
+    --input-border: 240, 1.89%, 20.78%;
+    --foreground: 0, 0%, 86.67%;
+  }
+
+  body {
+    overflow: hidden;
   }
 }

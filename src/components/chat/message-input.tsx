@@ -99,9 +99,9 @@ export function MessageInput(props: ChatInputProps) {
     <form
       ref={formRef}
       onSubmit={onSubmitHandler}
-      className="flex items-end justify-between w-full"
+      className="flex items-end justify-between w-full p-1"
     >
-      <div className="flex pl-1 pr-2 py-2 mx-1 flex-grow text-sm focus:border-solid relative overflow-hidden">
+      <div className="flex pl-1 pr-2 py-2 flex-grow text-sm focus:border-solid relative overflow-hidden">
         <div
           ref={editorRef}
           className={classs.editor}
@@ -145,7 +145,7 @@ export function MessageInput(props: ChatInputProps) {
       <Button
         startContent={<span className="icon-[lets-icons--send-fill] align-middle leading-[0.5] size-6"></span>}
         type="submit"
-        className="text-tiny text-white bg-black/20 bg-primary flex-shrink-0"
+        className="text-tiny text-white bg-black/20 bg-primary flex-shrink-0 h-9"
         variant="flat"
         color="default"
         radius="lg"

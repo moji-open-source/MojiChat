@@ -8,6 +8,21 @@ export default {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'media',
+  theme: {
+    extend: {
+      colors: {
+        foreground: {
+          DEFAULT: 'hsl(var(--foreground))'
+        },
+        border: {
+          DEFAULT: 'hsl(var(--border))'
+        },
+        input: {
+          DEFAULT: 'hsl(var(--input-border))'
+        }
+      }
+    }
+  },
   plugins: [
     addDynamicIconSelectors(),
     nextui({

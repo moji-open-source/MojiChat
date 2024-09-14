@@ -293,8 +293,8 @@ export function ChatWidget() {
 
   return (
     <>
-      <div className="flex flex-col h-screen overflow-hidden">
-        <ChatHeader className="flex-shrink-0">{chat.title}</ChatHeader>
+      <div className="flex flex-col h-screen overflow-hidden relative">
+        <ChatHeader className="flex-shrink-0 text-foreground">{chat.title}</ChatHeader>
 
         <div className="w-full diable-select-text overflow-x-hidden overflow-y-auto p-4" ref={chatDivRef}>
           {dataSources.map((it, index) => {
@@ -310,8 +310,8 @@ export function ChatWidget() {
                     <span className="text-gray-500">{it.time}</span>
                   </div>
 
-                  <div className="relative w-fit">
-                    <div className="chat-item-read-count bg-gray-200  dark:bg-[#3b3b3d]" draggable>
+                  <div className="w-fit">
+                    <div className="chat-item-read-count bg-gray-200  dark:bg-[#3b3b3d] text-foreground-50" draggable>
                       {it.content}
                     </div>
                   </div>
@@ -319,9 +319,11 @@ export function ChatWidget() {
               </div>
             )
           })}
+
+          <div className="h-12"></div>
         </div>
 
-        <div className="p-4">
+        <div className="sticky table bottom-0 w-[calc(100%-8px)] m-1 border-1 border-input rounded-large overflow-hidden bg-background/10 backdrop-blur">
           <MessageInput onSubmit={onSubmitHandler} />
         </div>
       </div>
@@ -334,7 +336,7 @@ const ChatHeader = (
 ) => {
   return (
     <div
-      className={`h-16 border-b-solid border-b-1 border-b-[var(--border-color)] flex items-center p-4 diable-select-text ${className}`}
+      className={`h-16 border-b-solid border-b-1 border-b-border flex items-center p-4 diable-select-text ${className}`}
       data-tauri-drag-region
     >
       {children}
