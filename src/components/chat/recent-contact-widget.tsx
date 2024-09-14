@@ -1,7 +1,6 @@
 'use client'
 
-import { Chat } from '@/store/chat'
-import { useChatStore } from '@/store/hooks'
+import { Chat, useRecentValue } from '@/store/use-recent'
 import {
   Avatar,
   Badge,
@@ -11,7 +10,7 @@ import {
 import dayjs from 'dayjs'
 
 export function RecentContactWidget() {
-  const { chats } = useChatStore()
+  const chats = useRecentValue()
 
   const itemClasses = {
     base: 'aria-[selected=true]:bg-[hsl(var(--nextui-default)/0.4)] diable-select-text'

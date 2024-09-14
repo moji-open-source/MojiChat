@@ -17,17 +17,16 @@
     "@nextui-org/react": "^2.4.6",
     "@react-aria/selection": "^3.19.1",
     "@react-stately/list": "^3.10.7",
-    "@reduxjs/toolkit": "^2.2.6",
     "@tauri-apps/api": "^1.6.0",
+    "classnames": "^2.5.1",
     "dayjs": "^1.11.12",
+    "jotai": "^2.9.3",
     "next": "14.2.5",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
-    "react-redux": "^9.1.2",
-    "react-resizable-panels": "^2.1.2",
-    "redux-persist": "^6.0.0"
+    "react-resizable-panels": "^2.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.10.0",

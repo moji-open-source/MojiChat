@@ -4,28 +4,21 @@ import { Button, Checkbox, Input, Link } from '@nextui-org/react'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useDispatch } from 'react-redux'
 
 import { EmailLoginRequest } from '@/ipc/user'
 import { closeCurrentWindowIpc } from '@/ipc/window'
-import { AppDispatch } from '@/store'
-import { emailLogin, getUserInfo } from '@/store/user'
 
 export function LoginForm() {
   const [isVisible, setIsSisible] = useState(false)
   const toggleVisibility = () => setIsSisible(!isVisible)
-  const dispatch = useDispatch<AppDispatch>()
   const form = useForm<EmailLoginRequest>()
   const [isLoading, setIsLoading] = useState(false)
 
   async function onSubmit(data: EmailLoginRequest) {
     try {
       setIsLoading(true)
-      const result = await dispatch(emailLogin(data))
-      const userInfo = await dispatch(getUserInfo())
 
-      console.log('result', result)
-      console.log('userInfo', userInfo)
+      console.log('data', data)
 
       setIsLoading(false)
       await closeCurrentWindowIpc('login_win')

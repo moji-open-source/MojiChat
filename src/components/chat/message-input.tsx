@@ -116,7 +116,7 @@ export function MessageInput(props: ChatInputProps) {
           onInput={onEditorChangeHandler}
           contentEditable
           data-placeholder="Say something~"
-        ></div>
+        />
       </div>
 
       <Button
