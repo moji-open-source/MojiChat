@@ -34,7 +34,7 @@ jobs:
         run: rustup target add aarch64-apple-darwin
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v6
+        uses: pnpm/action-setup@v6.0.9
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
